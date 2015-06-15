@@ -1,0 +1,1464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0EF6D49-7F7E-471E-A340-1BD7FE92A2FB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xmr.cs</RootNamespace>
+    <AssemblyName>xmr.cs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.2\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\ExamsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProblemsController.cs" />
+    <Compile Include="Controllers\TagLinksController.cs" />
+    <Compile Include="Controllers\TagsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506142017489_Initial.cs" />
+    <Compile Include="Migrations\201506142017489_Initial.Designer.cs">
+      <DependentUpon>201506142017489_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountBindingModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Exam.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Problem.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Tag.cs" />
+    <Compile Include="Models\TagLink.cs" />
+    <Compile Include="Models\XmrContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\courses\eda040\exams\081216\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\081216\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\081216\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\081216\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\081216\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\081216\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\081216\6.png" />
+    <Content Include="Content\images\courses\eda040\exams\081216\7.png" />
+    <Content Include="Content\images\courses\eda040\exams\081216\8.png" />
+    <Content Include="Content\images\courses\eda040\exams\081217\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\081217\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\081217\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\081217\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\081217\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\081217\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\081217\6.png" />
+    <Content Include="Content\images\courses\eda040\exams\081217\7.png" />
+    <Content Include="Content\images\courses\eda040\exams\081217\8.png" />
+    <Content Include="Content\images\courses\eda040\exams\091216\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\091216\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\091216\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\091216\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\091216\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\091216\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\101218\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\101218\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\101218\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\101218\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\101218\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\101218\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\101218\6.png" />
+    <Content Include="Content\images\courses\eda040\exams\111022\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\111022\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\111022\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\111022\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\111022\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\111022\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\111022\6.png" />
+    <Content Include="Content\images\courses\eda040\exams\120109\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\120109\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\120109\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\120109\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\120109\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\120109\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\120109\6.png" />
+    <Content Include="Content\images\courses\eda040\exams\121027\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\121027\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\121027\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\121027\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\121027\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\121027\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\131022\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\131022\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\131022\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\131022\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\131022\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\131022\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\140107\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\140107\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\140107\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\140107\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\140107\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\140107\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\141025\0.png" />
+    <Content Include="Content\images\courses\eda040\exams\141025\1.png" />
+    <Content Include="Content\images\courses\eda040\exams\141025\2.png" />
+    <Content Include="Content\images\courses\eda040\exams\141025\3.png" />
+    <Content Include="Content\images\courses\eda040\exams\141025\4.png" />
+    <Content Include="Content\images\courses\eda040\exams\141025\5.png" />
+    <Content Include="Content\images\courses\eda040\exams\141025\6.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081216\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081216\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081216\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081216\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081216\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081216\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081216\6.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081216\7.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081216\8.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081217\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081217\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081217\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081217\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081217\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081217\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081217\6.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081217\7.png" />
+    <Content Include="Content\images\courses\eda040\solutions\081217\8.png" />
+    <Content Include="Content\images\courses\eda040\solutions\091216\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\091216\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\091216\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\091216\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\091216\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\091216\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\101218\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\101218\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\101218\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\101218\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\101218\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\101218\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\101218\6.png" />
+    <Content Include="Content\images\courses\eda040\solutions\111022\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\111022\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\111022\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\111022\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\111022\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\111022\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\120109\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\120109\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\120109\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\120109\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\120109\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\120109\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\120109\6.png" />
+    <Content Include="Content\images\courses\eda040\solutions\121027\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\121027\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\121027\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\121027\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\121027\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\121027\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\131022\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\131022\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\131022\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\131022\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\131022\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\131022\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\131022\6.png" />
+    <Content Include="Content\images\courses\eda040\solutions\140107\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\140107\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\140107\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\140107\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\140107\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\140107\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\141025\0.png" />
+    <Content Include="Content\images\courses\eda040\solutions\141025\1.png" />
+    <Content Include="Content\images\courses\eda040\solutions\141025\2.png" />
+    <Content Include="Content\images\courses\eda040\solutions\141025\3.png" />
+    <Content Include="Content\images\courses\eda040\solutions\141025\4.png" />
+    <Content Include="Content\images\courses\eda040\solutions\141025\5.png" />
+    <Content Include="Content\images\courses\eda040\solutions\141025\6.png" />
+    <Content Include="Content\images\courses\edan40\exams\20021021\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20021021\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20021021\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20021021\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20021021\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20021021\5.png" />
+    <Content Include="Content\images\courses\edan40\exams\20031020\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20031020\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20031020\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20031020\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20031020\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20031020\5.png" />
+    <Content Include="Content\images\courses\edan40\exams\20041018\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20041018\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20041018\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20041018\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20041018\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20041018\5.png" />
+    <Content Include="Content\images\courses\edan40\exams\20051017\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20051017\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20051017\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20051017\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20051017\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20051017\5.png" />
+    <Content Include="Content\images\courses\edan40\exams\20061016\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20061016\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20061016\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20061016\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20061016\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20061016\5.png" />
+    <Content Include="Content\images\courses\edan40\exams\20081022\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20081022\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20081022\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20081022\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20081022\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20081022\5.png" />
+    <Content Include="Content\images\courses\edan40\exams\20091217\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20091217\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20091217\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20091217\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20091217\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20091217\5.png" />
+    <Content Include="Content\images\courses\edan40\exams\20101216\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20101216\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20101216\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20101216\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20101216\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20101216\5.png" />
+    <Content Include="Content\images\courses\edan40\exams\20111219\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20111219\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20111219\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20111219\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20111219\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20111219\5.png" />
+    <Content Include="Content\images\courses\edan40\exams\20121217\0.png" />
+    <Content Include="Content\images\courses\edan40\exams\20121217\1.png" />
+    <Content Include="Content\images\courses\edan40\exams\20121217\2.png" />
+    <Content Include="Content\images\courses\edan40\exams\20121217\3.png" />
+    <Content Include="Content\images\courses\edan40\exams\20121217\4.png" />
+    <Content Include="Content\images\courses\edan40\exams\20121217\5.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\1.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\10.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\11.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\12.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\13.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\14.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\2.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\3.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\4.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\5.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\6.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\7.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\8.png" />
+    <Content Include="Content\images\courses\eitf05\exams\091021\9.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\1.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\10.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\11.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\12.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\13.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\14.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\2.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\3.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\4.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\5.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\6.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\7.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\8.png" />
+    <Content Include="Content\images\courses\eitf05\exams\101020\9.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\1.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\10.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\11.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\12.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\13.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\14.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\2.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\3.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\4.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\5.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\6.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\7.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\8.png" />
+    <Content Include="Content\images\courses\eitf05\exams\111019\9.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\1.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\10.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\11.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\12.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\13.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\14.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\2.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\3.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\4.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\5.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\6.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\7.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\8.png" />
+    <Content Include="Content\images\courses\eitf05\exams\121024\9.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\1.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\10.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\11.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\12.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\13.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\14.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\2.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\3.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\4.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\5.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\6.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\7.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\8.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\091021\9.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\1.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\10.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\11.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\12.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\13.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\14.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\2.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\3.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\4.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\5.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\6.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\7.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\8.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\101020\9.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\1.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\10.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\11.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\12.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\13.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\14.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\2.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\3.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\4.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\5.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\6.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\7.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\8.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\111019\9.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\1.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\10.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\11.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\12.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\13.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\14.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\2.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\3.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\4.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\5.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\6.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\7.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\8.png" />
+    <Content Include="Content\images\courses\eitf05\solutions\121024\9.png" />
+    <Content Include="Content\images\courses\faff25\exams\091219\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\091219\1.png" />
+    <Content Include="Content\images\courses\faff25\exams\091219\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\091219\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\091219\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\091219\5.png" />
+    <Content Include="Content\images\courses\faff25\exams\100113\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\100113\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\100113\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\100113\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\100113\5.png" />
+    <Content Include="Content\images\courses\faff25\exams\100824\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\100824\1.png" />
+    <Content Include="Content\images\courses\faff25\exams\100824\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\100824\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\100824\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\100824\5.png" />
+    <Content Include="Content\images\courses\faff25\exams\101214\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\101214\1.png" />
+    <Content Include="Content\images\courses\faff25\exams\101214\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\101214\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\101214\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\101214\5.png" />
+    <Content Include="Content\images\courses\faff25\exams\110112\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\110112\1.png" />
+    <Content Include="Content\images\courses\faff25\exams\110112\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\110112\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\110112\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\110112\5.png" />
+    <Content Include="Content\images\courses\faff25\exams\110822\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\110822\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\110822\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\110822\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\110822\5.png" />
+    <Content Include="Content\images\courses\faff25\exams\111213\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\111213\1.png" />
+    <Content Include="Content\images\courses\faff25\exams\111213\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\111213\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\111213\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\111213\5.png" />
+    <Content Include="Content\images\courses\faff25\exams\120111\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\120111\1.png" />
+    <Content Include="Content\images\courses\faff25\exams\120111\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\120111\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\120111\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\120111\5.png" />
+    <Content Include="Content\images\courses\faff25\exams\121220\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\121220\1.png" />
+    <Content Include="Content\images\courses\faff25\exams\121220\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\121220\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\121220\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\121220\5.png" />
+    <Content Include="Content\images\courses\faff25\exams\130109\0.png" />
+    <Content Include="Content\images\courses\faff25\exams\130109\1.png" />
+    <Content Include="Content\images\courses\faff25\exams\130109\2.png" />
+    <Content Include="Content\images\courses\faff25\exams\130109\3.png" />
+    <Content Include="Content\images\courses\faff25\exams\130109\4.png" />
+    <Content Include="Content\images\courses\faff25\exams\130109\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\091219\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\091219\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\091219\2.png" />
+    <Content Include="Content\images\courses\faff25\solutions\091219\3.png" />
+    <Content Include="Content\images\courses\faff25\solutions\091219\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\091219\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100113\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100113\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100113\2.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100113\3.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100113\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100113\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100824\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100824\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100824\2.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100824\3.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100824\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\100824\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\101214\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\101214\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\101214\2.png" />
+    <Content Include="Content\images\courses\faff25\solutions\101214\3.png" />
+    <Content Include="Content\images\courses\faff25\solutions\101214\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\101214\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110112\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110112\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110112\2.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110112\3.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110112\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110112\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110822\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110822\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110822\2.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110822\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\110822\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\111213\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\111213\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\111213\2.png" />
+    <Content Include="Content\images\courses\faff25\solutions\111213\3.png" />
+    <Content Include="Content\images\courses\faff25\solutions\111213\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\111213\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\120111\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\120111\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\120111\2.png" />
+    <Content Include="Content\images\courses\faff25\solutions\120111\3.png" />
+    <Content Include="Content\images\courses\faff25\solutions\120111\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\120111\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\121220\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\121220\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\121220\3.png" />
+    <Content Include="Content\images\courses\faff25\solutions\121220\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\121220\5.png" />
+    <Content Include="Content\images\courses\faff25\solutions\130109\0.png" />
+    <Content Include="Content\images\courses\faff25\solutions\130109\1.png" />
+    <Content Include="Content\images\courses\faff25\solutions\130109\2.png" />
+    <Content Include="Content\images\courses\faff25\solutions\130109\3.png" />
+    <Content Include="Content\images\courses\faff25\solutions\130109\4.png" />
+    <Content Include="Content\images\courses\faff25\solutions\130109\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20111213\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20111213\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20111213\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20111213\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20111213\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20111213\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120114\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120114\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120114\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120114\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120114\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120114\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120309\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120309\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120309\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120309\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120309\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120309\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120309\6.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120410\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120410\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120410\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120410\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120410\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120410\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120521\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120521\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120521\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120521\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120521\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120521\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120828\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120828\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120828\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120828\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120828\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20120828\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121027\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121027\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121027\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121027\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121027\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121027\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121218\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121218\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121218\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20121218\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130112\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130112\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130112\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130112\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130112\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130112\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130315\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130315\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130315\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130315\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130315\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130315\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130402\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130402\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130402\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130402\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130402\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130402\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130527\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130527\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130527\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130527\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130827\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130827\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130827\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130827\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130827\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20130827\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131026\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131026\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131026\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131026\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131026\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131026\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131217\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131217\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131217\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131217\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131217\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20131217\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140314\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140314\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140314\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140314\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140314\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140314\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140526\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140526\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140526\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140526\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140526\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140526\5.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140826\0.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140826\1.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140826\2.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140826\3.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140826\4.png" />
+    <Content Include="Content\images\courses\fma430\exams\20140826\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2011-12-13\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2011-12-13\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2011-12-13\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2011-12-13\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2011-12-13\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2011-12-13\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-01-14\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-01-14\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-01-14\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-01-14\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-01-14\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-01-14\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-03-09\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-03-09\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-03-09\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-03-09\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-03-09\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-03-09\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-03-09\6.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-04-10\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-04-10\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-04-10\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-04-10\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-04-10\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-04-10\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-05-21\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-05-21\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-05-21\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-05-21\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-05-21\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-05-21\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-08-28\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-08-28\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-08-28\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-08-28\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-08-28\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-08-28\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-10-27\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-10-27\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-10-27\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-10-27\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-10-27\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-10-27\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-12-18\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-12-18\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-12-18\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2012-12-18\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-01-12\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-01-12\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-01-12\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-01-12\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-01-12\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-01-12\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-03-15\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-03-15\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-03-15\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-03-15\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-03-15\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-03-15\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-04-02\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-04-02\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-04-02\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-04-02\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-04-02\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-04-02\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-05-27\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-05-27\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-05-27\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-05-27\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-08-27\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-08-27\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-08-27\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-08-27\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-08-27\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-08-27\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-10-26\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-10-26\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-10-26\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-10-26\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-10-26\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-10-26\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-12-17\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-12-17\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-12-17\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-12-17\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-12-17\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2013-12-17\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-03-14\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-03-14\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-03-14\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-03-14\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-03-14\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-03-14\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-05-26\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-05-26\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-05-26\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-05-26\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-05-26\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-05-26\5.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-08-26\0.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-08-26\1.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-08-26\2.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-08-26\3.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-08-26\4.png" />
+    <Content Include="Content\images\courses\fma430\exam_2014-08-26\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20111213\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20111213\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20111213\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20111213\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20111213\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20111213\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120114\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120114\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120114\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120114\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120114\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120114\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120309\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120309\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120309\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120309\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120309\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120309\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120410\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120410\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120410\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120410\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120410\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120410\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120521\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120521\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120521\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120521\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120521\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120521\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120828\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120828\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120828\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120828\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120828\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20120828\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121027\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121027\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121027\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121027\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121027\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121027\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121218\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121218\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121218\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121218\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121218\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20121218\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130112\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130112\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130112\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130112\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130112\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130112\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130315\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130315\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130315\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130315\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130315\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130315\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130402\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130527\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130527\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130527\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130527\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20130527\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131026\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131026\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131026\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131026\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131026\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131026\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131217\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131217\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131217\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131217\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131217\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20131217\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140314\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140314\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140314\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140314\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140314\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140314\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140526\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140526\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140526\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140526\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140526\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140526\5.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140826\0.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140826\1.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140826\2.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140826\3.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140826\4.png" />
+    <Content Include="Content\images\courses\fma430\solutions\20140826\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2011-12-13_\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2011-12-13_\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2011-12-13_\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2011-12-13_\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2011-12-13_\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2011-12-13_\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-01-14\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-01-14\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-01-14\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-01-14\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-01-14\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-01-14\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-03-09_\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-03-09_\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-03-09_\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-03-09_\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-03-09_\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-03-09_\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-04-10\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-04-10\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-04-10\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-04-10\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-04-10\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-04-10\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-05-21_\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-05-21_\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-05-21_\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-05-21_\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-05-21_\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-05-21_\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-08-28_\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-08-28_\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-08-28_\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-08-28_\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-08-28_\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-08-28_\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-10-27_\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-10-27_\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-10-27_\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-10-27_\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-10-27_\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-10-27_\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-12-18__\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-12-18__\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-12-18__\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-12-18__\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-12-18__\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2012-12-18__\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-01-12\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-01-12\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-01-12\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-01-12\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-01-12\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-01-12\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-03-15\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-03-15\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-03-15\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-03-15\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-03-15\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-03-15\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-04-02\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-05-27\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-05-27\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-05-27\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-05-27\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-05-27\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-10-26_1\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-10-26_1\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-10-26_1\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-10-26_1\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-10-26_1\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-10-26_1\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-12-17\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-12-17\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-12-17\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-12-17\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-12-17\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2013-12-17\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-03-14_2\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-03-14_2\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-03-14_2\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-03-14_2\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-03-14_2\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-03-14_2\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-05-26_1\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-05-26_1\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-05-26_1\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-05-26_1\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-05-26_1\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-05-26_1\5.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-08-26_1\0.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-08-26_1\1.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-08-26_1\2.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-08-26_1\3.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-08-26_1\4.png" />
+    <Content Include="Content\images\courses\fma430\solution_2014-08-26_1\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20100808\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20100808\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20100808\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20100808\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20100808\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20100808\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20101212\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20101212\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20101212\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20101212\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20101212\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20101212\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110303\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110303\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110303\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110303\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110303\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110303\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110404\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110404\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110404\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110404\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110404\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110404\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110808\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110808\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110808\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110808\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110808\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20110808\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20111212\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20111212\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20111212\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20111212\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20111212\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20111212\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120303\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120303\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120303\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120303\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120303\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120303\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120404\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120404\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120404\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120404\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120404\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120404\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120808\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120808\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120808\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120808\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120808\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20120808\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20121212\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20121212\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20121212\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20121212\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20121212\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20121212\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130303\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130303\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130303\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130303\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130303\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130303\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130404\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130404\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130404\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130404\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130404\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\exams\20130404\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20100808\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20100808\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20100808\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20100808\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20100808\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20100808\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20101212\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20101212\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20101212\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20101212\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20101212\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20101212\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110303\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110303\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110303\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110303\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110303\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110303\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110404\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110404\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110404\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110404\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110404\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110404\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110808\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110808\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110808\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110808\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110808\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20110808\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20111212\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20111212\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20111212\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20111212\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20111212\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20111212\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120303\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120303\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120303\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120303\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120303\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120303\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120404\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120404\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120404\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120404\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120404\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120808\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120808\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120808\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120808\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120808\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20120808\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20121212\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20121212\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20121212\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20121212\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20121212\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20121212\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130303\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130303\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130303\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130303\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130303\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130303\5.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130404\0.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130404\1.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130404\2.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130404\3.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130404\4.png" />
+    <Content Include="Content\images\courses\fmaa01a2\solutions\20130404\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110428\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110428\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110428\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110428\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110428\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110428\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110601\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110601\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110601\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110601\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110601\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110601\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110824\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110824\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110824\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110824\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110824\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20110824\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120112\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120112\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120112\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120112\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120112\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120112\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120308\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120308\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120308\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120308\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120308\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120308\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120412\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120412\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120412\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120412\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120412\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120412\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120530\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120530\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120530\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120530\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120530\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120530\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120829\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120829\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120829\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120829\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120829\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20120829\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130110\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130110\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130110\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130110\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130110\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130110\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130314\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130314\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130314\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130314\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130314\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130314\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130403\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130403\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130403\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130403\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130403\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130403\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130605\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130605\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130605\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130605\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130605\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\exams\20130605\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110428\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110428\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110428\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110428\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110428\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110428\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110601\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110601\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110601\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110601\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110601\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110601\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110824\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110824\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110824\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110824\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110824\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20110824\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120112\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120112\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120112\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120112\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120112\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120112\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120308\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120308\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120308\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120308\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120308\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120308\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120412\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120412\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120412\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120412\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120412\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120412\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120530\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120530\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120530\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120530\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120530\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120530\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120829\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120829\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120829\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120829\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120829\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20120829\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130110\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130110\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130110\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130110\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130110\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130110\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130314\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130314\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130314\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130314\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130314\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130314\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130403\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130403\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130403\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130403\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130403\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130403\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130605\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130605\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130605\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130605\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130605\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130605\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130828\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130828\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130828\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130828\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130828\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20130828\5.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20131220\0.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20131220\1.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20131220\2.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20131220\3.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20131220\4.png" />
+    <Content Include="Content\images\courses\fmaa01a3\solutions\20131220\5.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201506142017489_Initial.resx">
+      <DependentUpon>201506142017489_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60014</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3248/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xmr.cs", "xmr.cs\xmr.cs.csproj", "{E0EF6D49-7F7E-471E-A340-1BD7FE92A2FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xmr.cs.Tests", "xmr.cs.Tests\xmr.cs.Tests.csproj", "{24793D2E-CF9F-4C6C-AF94-81A2E9AF970F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0EF6D49-7F7E-471E-A340-1BD7FE92A2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0EF6D49-7F7E-471E-A340-1BD7FE92A2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0EF6D49-7F7E-471E-A340-1BD7FE92A2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0EF6D49-7F7E-471E-A340-1BD7FE92A2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24793D2E-CF9F-4C6C-AF94-81A2E9AF970F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24793D2E-CF9F-4C6C-AF94-81A2E9AF970F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24793D2E-CF9F-4C6C-AF94-81A2E9AF970F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24793D2E-CF9F-4C6C-AF94-81A2E9AF970F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
